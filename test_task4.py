@@ -13,14 +13,14 @@
 name_list = ['ignat', 'sergey', 'ilia', 'valera', 'roma', 'david', 'platon']
 salary_list = [2300, 3300, 34000, 12000, 99000, 21000, 11000]
 salaries_dict = dict(zip(name_list, salary_list))
-f = open('salary.txt', 'a+')
 
-for key in salaries_dict:
-    f.write(f'{key} - {salaries_dict[key]} \n')
+with open('salary.txt', 'a+') as f:
+    for key in salaries_dict:
+        f.write(f'{key} - {salaries_dict[key]} \n')
+    f.seek(0)
+    for line in f:
+        print(line.strip())
 
-f.seek(0)
-print(f.readlines())
-f.close()
 
 
 
