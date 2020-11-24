@@ -21,7 +21,8 @@ with open('salary.txt', 'a+') as f:
     for line in f:
         name, dash, salary = line.split()
         salary_ndfl = int(salary) * 0.87
-        print(name.upper(), dash, int(salary_ndfl))
+        if salary_ndfl < 50000:
+            print(name.upper(), dash, int(salary_ndfl))
 
 
 
