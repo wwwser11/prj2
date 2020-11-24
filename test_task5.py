@@ -16,6 +16,7 @@
 
 # Сохраните эти сущности, полностью, каждую в свой файл,
 # в качестве названия для файла использовать name, расширение .txt
+#
 # Напишите функцию, которая будет считывать файл игрока и его врага, получать оттуда данные, и записывать их в словари,
 # после чего происходит запуск игровой сессии, где сущностям поочередно наносится урон,
 # пока у одного из них health не станет меньше или равен 0.
@@ -43,6 +44,21 @@ def attack(striker, defender):
         return 'идем дальше'
     else:
        return f'{ defender["name"] } мертв'
+
+
+p = open('player_name.txt', 'w')
+for line in player:
+    p.write(str(line))
+    p.write(' - ')
+    p.write(f'{str(player.get(line))}\n')
+p.close()
+
+e = open('enemy_name.txt', 'w')
+for line in enemy:
+    e.write(str(line))
+    e.write(' - ')
+    e.write(f'{str(enemy.get(line))}\n')
+e.close()
 
 
 print(attack(player, enemy))
