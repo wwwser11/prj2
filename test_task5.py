@@ -27,9 +27,9 @@ import random
 player_name = input('Введи имя первого игрока: ')
 enemy_name = input('Введи имя второго игрока: ')
 
-player = {'name': player_name, 'health': 100, 'damage': random.randint(0, 50),
+player = {'name': player_name, 'health': 100, 'damage': random.randint(0, 30),
           'armor': round(random.triangular(1, 1.5), 2)}
-enemy = {'name': enemy_name, 'health': 100, 'damage': random.randint(0, 50),
+enemy = {'name': enemy_name, 'health': 100, 'damage': random.randint(0, 30),
          'armor': round(random.triangular(1, 1.5), 2)}
 
 
@@ -66,11 +66,6 @@ for line in enemy:
 e.close()
 
 
-# считывает файл игрока и его врага, получает оттуда данные, и записывает их в словари
-# Напишите функцию, которая будет считывать файл игрока и его врага, получать оттуда данные, и записывать их в словари,
-# после чего происходит запуск игровой сессии, где сущностям поочередно наносится урон,
-# пока у одного из них health не станет меньше или равен 0.
-# После чего на экран должно быть выведено имя победителя, и количество оставшихся единиц здоровья.
 def game():
     with open('player_name.txt', 'r') as p:
         player_dict = {}
@@ -83,16 +78,34 @@ def game():
         for line in e:
             x, y = line.strip().split(' - ')
             enemy_dict[x] = y
-#необходимо перевести значения словаря в флоат
+
+    player_dict['health'] = round(float(player_dict['health']), 2)
+    player_dict['damage'] = round(float(player_dict['damage']), 2)
+    player_dict['armor'] = round(float(player_dict['armor']), 2)
+    enemy_dict['health'] = round(float(enemy_dict['health']), 2)
+    enemy_dict['damage'] = round(float(enemy_dict['damage']), 2)
+    enemy_dict['armor'] = round(float(enemy_dict['armor']), 2)
     while player_dict['health'] > 0 and enemy_dict['health'] > 0:
         if player_dict['health'] > 0:
+            print(f'{player_dict["name"]} наносит удар')
             enemy_dict['health'] = attack(player_dict, enemy_dict)
+            if round(enemy_dict["health"], 2) > 0:
+                print(f'У {enemy_dict["name"]} {round(enemy_dict["health"], 2)}% жизни')
+            else:
+                print(f'{enemy_dict["name"]} труп')
         if enemy_dict['health'] > 0:
+            print(f'{enemy_dict["name"]} наносит удар')
             player_dict['health'] = attack(enemy_dict, player_dict)
+            if round(player_dict["health"], 2) > 0:
+                print(f'У {player_dict["name"]} {round(player_dict["health"], 2)}% жизни')
+            else:
+                print(f'{player_dict["name"]} труп')
+
 
     if player_dict['health'] < 0:
-        return(f'игрок 1 лох')
-    else:
-        return(f'user2 loser')
+        return(f'{player_dict["name"]} проиграл(a), у {enemy_dict["name"]} еще {round(enemy_dict["health"], 2)}% жизней')
+    elif enemy_dict['health'] < 0:
+        return(f'{enemy_dict["name"]} проиграл(a), у {player_dict["name"]} еще {round(player_dict["health"], 2)}% жизней')
+
 
 print(game())
