@@ -37,7 +37,8 @@ def remove_dirs():
             return "Такая/такие директория/и уже удалены или не создавались!"
 
 def viewed():
-    return os.listdir(path=".")
+    # return os.listdir(path=".") это отображает все файлы, а необходимо ток папки
+    return [i for i in os.listdir() if os.path.isdir(i)]
 
 def f_copy(file_one, file_two):
     shutil.copy(file_one, file_two)
@@ -45,38 +46,38 @@ def f_copy(file_one, file_two):
 # print(remove_dirs())
 # print(make_dirs())
 # print(f_copy())
-
+# print(viewed())
 
 def change_dir():
     user_lib = input('В какую папку хочешь перейти? :')
     try:
         os.chdir(user_lib)
-        print('Перешел')
+        print('\nПерешел')
     except FileNotFoundError:
-        print('Неверное название папки, такой нет!')
+        print('\nНеверное название папки, такой нет!')
 
 def watcher():
-    user_lib = input('Какую папку хочешь посмотреть? :')
+    # user_lib = input('\nКакую папку хочешь посмотреть? :')
     try:
-        print(f'Наслаждайся просмотренным :\n {os.listdir(user_lib)}')
+        print(f'\nНаслаждайся просмотренным :\n {os.listdir()}')
     except FileNotFoundError:
-        print('Неверное название папки, такой нет!')
+        print('\nНеверное название папки, такой нет!')
 
 def remover():
-    user_lib = input('Какую папку хочешь удалить? :')
+    user_lib = input('\nКакую папку хочешь удалить? :')
     try:
         os.rmdir(user_lib)
-        print('Папка удалена!')
+        print('\nПапка удалена!')
     except ValueError:
-        print('Неверное название папки!')
+        print('\nНеверное название папки!')
     except OSError:
-        print('Возможно папка не пустая, проверь, удали, вернись')
+        print('\nВозможно папка не пустая, проверь, удали, вернись')
 
 def maker():
-    user_lib = input('Какую папку хочешь создать? :')
+    user_lib = input('\nКакую папку хочешь создать? :')
     try:
         os.mkdir(user_lib)
-        print('Папка создана успешно!')
+        print('\nПапка создана успешно!')
     except OSError:
-        print('Такая папка уже есть!')
+        print('\nТакая папка уже есть!')
 

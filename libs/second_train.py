@@ -18,42 +18,24 @@
 from my_first_lib import change_dir, watcher, remover, maker
 import os
 
-user_choice = input('Друже, выбери действие \n'
+while True:
+
+    user_choice = input('\nДруже, выбери действие \n'
                     '1. Перейти в папку \n'
                     '2. Просмотреть содержимое текущей папки \n'
                     '3. Удалить папку \n'
-                    '4. Создать папку \n')
-
-if user_choice == '1':
-    # user_lib = input('В какую папку хочешь перейти? :' )
-    # try:
-    #     os.chdir(user_lib)
-    #     print('Перешел')
-    # except FileNotFoundError:
-    #     print('Неверное название папки, такой нет!')
-    change_dir()
-elif user_choice == '2':
-    # user_lib = input('Какую папку хочешь посмотреть? :')
-    # try:
-    #     print(f'Наслаждайся просмотренным :\n {os.listdir(user_lib)}')
-    # except FileNotFoundError:
-    #     print('Неверное название папки, такой нет!')
-    watcher()
-elif user_choice == '3':
-    # user_lib = input('Какую папку хочешь удалить? :')
-    # try:
-    #     os.rmdir(user_lib)
-    #     print('Папка удалена!')
-    # except ValueError:
-    #     print('Неверное название папки!')
-    remover()
-elif user_choice == '4':
-    # user_lib = input('Какую папку хочешь создать? :')
-    # try:
-    #     os.mkdir(user_lib)
-    #     print('Папка создана успешно!')
-    # except OSError:
-    #     print('Такая папка уже есть!')
-    maker()
-else:
-    print('Ты ввел неккоректное значение :(')
+                    '4. Создать папку \n'
+                    '5. Выйти \n\n')
+    if user_choice == '1':
+        change_dir()
+    elif user_choice == '2':
+        watcher()
+    elif user_choice == '3':
+        remover()
+    elif user_choice == '4':
+        maker()
+    elif user_choice == '5':
+        print('Bye')
+        break
+    else:
+        print('Ты ввел неккоректное значение :(')
