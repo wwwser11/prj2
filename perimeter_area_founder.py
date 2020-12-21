@@ -1,5 +1,5 @@
 #Тренировка классов
-#Считаем периметр
+#Считаем периметр и площадь
 
 class Rectangle:
     def __init__(self, value_one, value_two):
