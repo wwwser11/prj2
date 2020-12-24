@@ -37,12 +37,12 @@ class User:
             n = password.find(line[:-1])
             # print(line1[0])
             if n >= 1:
-                print('is inside')
-                print(line[:-1])
-                print(len(line))
+                # print('is inside')
+                # print(line[:-1])
+                # print(len(line))
                 if (len(password) / (len(line)- 1)) < 1.2:
-                    print('слишком просто')
-                    print(line)
+                    # print('слишком просто')
+                    # print(line)
                     return True
         return False
 
@@ -66,4 +66,4 @@ class User:
         print('correct!')
 
 
-# bob = User('bob', '1doctor')
+# bob = User('bob', '11doctor')
