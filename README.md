@@ -1,178 +1,90 @@
-# Project Overview
 
-This repository contains various Python tasks and exercises designed to improve problem-solving and coding skills. Each script covers fundamental programming concepts, including classes, file handling, and simple mathematical operations.
+# Python Practice Tasks
+
+This repository contains a collection of Python tasks and exercises aimed at improving programming skills in various areas, including file handling, algorithmic problem-solving, object-oriented programming, and working with arrays. Each task focuses on fundamental concepts and practices that are essential for both beginner and intermediate Python developers.
 
 ## Table of Contents
 
-1. [Equations and Calculations](#equations-and-calculations)
-2. [Text Alignment](#text-alignment)
-3. [List Operations](#list-operations)
-4. [User Input Formatting](#user-input-formatting)
-5. [File Handling Practice](#file-handling-practice)
-6. [Simple Game](#simple-game)
-7. [Object-Oriented Programming (OOP) Game](#oop-game)
-8. [Class Exercises](#class-exercises)
-9. [Rectangle Geometry](#rectangle-geometry)
+1. [Introduction](#introduction)
+2. [Project Structure](#project-structure)
+3. [Tasks and Exercises](#tasks-and-exercises)
+4. [Libraries](#libraries)
+5. [How to Use](#how-to-use)
 
 ---
 
-## Equations and Calculations
+## Introduction
 
-- **File:** `equation1.py`
-- **Description:** A basic equation solver for the linear equation `y = kx + b`.
-
----
-
-## Text Alignment
-
-- **File:** `test_task1.py`
-- **Description:** Aligns words to the right side of the output. Useful for practicing text manipulation and formatting.
+This repository is a collection of Python scripts for practicing coding and problem-solving. The tasks cover a range of topics, from basic operations and calculations to more advanced topics like object-oriented programming and array manipulations. These exercises are ideal for Python learners who want to strengthen their skills through hands-on practice.
 
 ---
 
-## List Operations
+## Project Structure
 
-- **File:** `test_task2.py`
-- **Description:** Takes two lists and removes overlapping characters from the first list. This task focuses on list operations and basic set theory concepts.
+- **libs/**: Contains helper libraries and additional functions.
+  - [`my_first_lib.py`](libs/my_first_lib.py): The first library file with utility functions.
+  - [`second_train.py`](libs/second_train.py): Another library file for supplementary tasks.
 
----
+- **python-array-algorithms/**: Directory for tasks focused on array and matrix manipulations.
+  - [`easypasswords.txt`](python-array-algorithms/easypasswords.txt): Sample text file for password-related tasks.
 
-## User Input Formatting
-
-- **File:** `test_task3.py`
-- **Description:** Prompts the user to enter their name, age, and city, then displays this information in a neatly formatted style.
-
----
-
-## File Handling Practice
-
-- **File:** `test_task4.py`
-- **Description:** A set of exercises focused on reading from and writing to files. Specific conditions and instructions are commented within the script.
+- **Root directory files**: Various standalone Python scripts, each focusing on a different aspect of programming.
 
 ---
 
-## Simple Game
+## Tasks and Exercises
 
-- **File:** `test_task5.py`
-- **Description:** A basic game designed to improve coding logic. Task requirements and game instructions are detailed within the script.
+1. **[Equation Solver](equation1.py)**  
+   A basic equation solver for the linear equation `y = kx + b`.
+
+2. **[OOP Game](game#2.py)**  
+   A modified game script that introduces object-oriented programming concepts by using classes.
+
+3. **[Class Exercises](idk.py)**  
+   Additional practice script for working with classes.
+
+4. **[Matrix Creation](make_mtrx.py)**  
+   Creates and manipulates matrices, demonstrating foundational skills in array manipulation.
+
+5. **[Password Access](password_access.py)**  
+   A basic script to handle and verify password access using text file data.
+
+6. **[Rectangle Geometry](perimeter_area_founder.py)**  
+   Calculates the perimeter and area of a rectangle, serving as a practical exercise for class usage in solving geometry problems.
+
+### Individual Tasks (Task Scripts)
+
+- **[Task 1](task1.py)**: The first exercise in the series, focusing on basic list operations.
+- **[Task 2](task2.py)**: Further list operations and manipulation.
+- **[Task 3](task3.py)**: User input formatting and display.
+- **[Task 4](task4.py)**: Intermediate task for file handling and processing.
+- **[Task 5](task5.py)**: A simple game focusing on logical structure and basic gameplay mechanics.
+- **[Task 6](task6.py)**: Additional gameplay mechanics and logic practice.
+- **[Task 7](task7.py)**: Further list manipulations and calculations.
+- **[Task 8](task8.py)**: Problem-solving tasks with lists and arrays.
+- **[Task 9](task9.py)**: Advanced exercises with lists and arithmetic operations.
+
+### Test Tasks (Test_Scripts)
+
+- **[Test Task 1](test_tasks1.py)**: Aligns text and words to the right side, practicing text manipulation.
+- **[Test Task 2](test_tasks2.py)**: List operations that remove overlapping characters.
+- **[Test Task 3](test_tasks3.py)**: Prompts for name, age, and city, and formats the output.
+- **[Test Task 4](test_task4.py)**: File handling practice with specific conditions.
+- **[Test Task 5](test_task5.py)**: Simple game logic with basic rules.
+- **[Test Task 6](test_task6.py)**: Continuation of game development with added complexity.
+
 
 ---
 
-## Object-Oriented Programming (OOP) Game
+## Libraries
 
-- **File:** `game#2.py`
-- **Description:** A modified version of `test_task5`, incorporating classes for an introduction to object-oriented programming concepts.
-
----
-
-## Class Exercises
-
-- **File:** `idk.py`
-- **Description:** Additional practice with classes. Instructions are commented within the script for easy reference.
+The repository also includes some additional libraries located in the `libs/` folder, which provide utility functions used by some of the main scripts. Feel free to explore and modify them to better understand their functionality.
 
 ---
 
-## Rectangle Geometry
+## How to Use
 
-- **File:** `perimeter_area_founder.py`
-- **Description:** Calculates the perimeter and area of a rectangle. This task serves as practice for using classes to solve geometric problems.
-
----
-
-## Additional Notes
-
-- All tasks are designed to improve specific programming skills.
-- Detailed instructions for each exercise can be found within the scripts.
-  
---- 
-
-## Getting Started
-
-To try any of these tasks, simply clone the repository, open the desired file, and run it with Python.
-
-```bash
-git clone <repository-url>
-cd <directory>
-python <file_name>.py
-# python-array-algorithms
-
-## Overview (English)
-
-
-This repository contains a collection of Python-based training tasks focused on array manipulation, matrix operations, and algorithmic problem-solving. Each task is designed to improve foundational programming skills without relying on built-in functions like `max`, `min`, `sum`, or `sorted`. Perfect for learning Python through hands-on practice and understanding fundamental concepts.
-
-## Tasks
-
-1. **Divisibility Count**  
-   In the range of natural numbers from 2 to 99, determine how many numbers are divisible by each number in the range from 2 to 9. Note: The result should be 8 different counts.
-
-2. **Even Indices Array**  
-   Save the indices of even elements in a second array. For example, if the array contains values `8, 3, 15, 6, 4, 2`, the second array should be filled with `0, 3, 4, 5` because these positions in the first array contain even numbers.
-
-3. **Swap Min and Max**  
-   In an array of random integers, swap the minimum and maximum elements.
-
-4. **Most Frequent Element**  
-   Determine which number appears most frequently in the array.
-
-5. **Largest Negative Element**  
-   Find the largest negative element in the array. Display its value and position in the array. Note: The largest negative element is not the same as the minimum element.
-
-6. **Sum Between Min and Max**  
-   Find the sum of elements located between the minimum and maximum elements in a one-dimensional array. Exclude the minimum and maximum elements themselves from the sum.
-
-7. **Two Smallest Elements**  
-   Determine the two smallest elements in a one-dimensional array of integers. These two elements may be equal (if both are the smallest) or different.
-
-8. **5x4 Matrix with Row Sums**  
-   Fill a 5x4 matrix with input values from the keyboard, except for the last element in each row. Calculate the sum of the entered elements in each row and store it in the last cell of the row. Finally, display the resulting matrix.
-
-9. **Max Among Column Minimums**  
-   Find the largest element among the minimum elements of each column in a matrix.
-
-**Note**: Try solving each task without using functions such as `max`, `min`, `sum`, `sorted`, or their equivalents, including any custom implementations.
-
-### Additional Rules
-
-For tasks 3, 4, 5, 6, and 9, if the target element(s) appear multiple times in the array, use any one occurrence of your choice.
-
----
-
-## Описание проекта (Русский)
-
-Этот репозиторий содержит набор учебных задач на Python, направленных на работу с массивами, матрицами и алгоритмическими задачами. Каждая задача поможет развить базовые навыки программирования, избегая использования встроенных функций, таких как `max`, `min`, `sum`, или `sorted`. Идеально подходит для обучения Python через практику и освоение базовых концепций.
-
-## Задачи
-
-1. **Подсчет кратных чисел**  
-   В диапазоне натуральных чисел от 2 до 99 определить, сколько чисел кратны каждому из чисел в диапазоне от 2 до 9. Результат должен содержать 8 различных значений.
-
-2. **Массив индексов четных элементов**  
-   Сохраните индексы четных элементов первого массива во втором массиве. Например, если массив содержит значения `8, 3, 15, 6, 4, 2`, второй массив должен содержать `0, 3, 4, 5`, так как именно в этих позициях первого массива стоят четные числа.
-
-3. **Замена минимального и максимального элементов**  
-   В массиве случайных целых чисел поменяйте местами минимальный и максимальный элементы.
-
-4. **Чаще всего встречающееся число**  
-   Определите, какое число в массиве встречается чаще всего.
-
-5. **Максимальный отрицательный элемент**  
-   Найдите максимальный отрицательный элемент в массиве. Выведите его значение и позицию в массиве. Примечание: максимальный отрицательный элемент — это не то же самое, что минимальный элемент массива.
-
-6. **Сумма между минимальным и максимальным элементами**  
-   Найдите сумму элементов массива, находящихся между минимальным и максимальным элементами. Минимальный и максимальный элементы не включайте в сумму.
-
-7. **Два наименьших элемента**  
-   Определите два наименьших элемента в одномерном массиве целых чисел. Эти элементы могут быть как одинаковыми (оба минимальны), так и различными.
-
-8. **Матрица 5x4 с суммами строк**  
-   Заполните матрицу 5x4, вводя элементы с клавиатуры, кроме последнего элемента в каждой строке. Рассчитайте сумму введенных элементов каждой строки и сохраните её в последней ячейке строки. В конце выведите полученную матрицу.
-
-9. **Максимум среди минимумов столбцов**  
-   Найдите максимальный элемент среди минимальных элементов каждого столбца в матрице.
-
-**Примечание**: Попытайтесь решить задачи без использования функций, таких как `max`, `min`, `sum`, `sorted`, а также их аналогов, включая написанные самостоятельно.
-
-### Дополнительные правила
-
-Для задач 3, 4, 5, 6 и 9, если искомый элемент(ы) встречается в массиве несколько раз, используйте любой из них по вашему выбору.
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd python-practice-tasks
