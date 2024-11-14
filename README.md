@@ -19,19 +19,6 @@ This repository is a collection of Python scripts for practicing coding and prob
 
 ---
 
-## Project Structure
-
-- **libs/**: Contains helper libraries and additional functions.
-  - [`my_first_lib.py`](libs/my_first_lib.py): The first library file with utility functions.
-  - [`second_train.py`](libs/second_train.py): Another library file for supplementary tasks.
-
-- **python-array-algorithms/**: Directory for tasks focused on array and matrix manipulations.
-  - [`easypasswords.txt`](python-array-algorithms/easypasswords.txt): Sample text file for password-related tasks.
-
-- **Root directory files**: Various standalone Python scripts, each focusing on a different aspect of programming.
-
----
-
 ## Tasks and Exercises
 
 1. **[Equation Solver](equation1.py)**  
